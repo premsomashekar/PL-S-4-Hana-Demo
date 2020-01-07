@@ -24,3 +24,45 @@ Projection view - A projection view is a special view for hiding fields from a s
                   
 IF_AMDP_MARKER_HDB
 IF_HTTP_EXTENSION
+
+CDS function like currency conversion
+
+@AbapCatalog.sqlViewName: 'SQL_VIEW_NAME'
+@EndUserText.label: 'Sales Order Application'
+@VDM.viewType: #TRANSACTIONAL
+@AccessControl.authorizationCheck
+
+@odata.publish: true
+@Search.searchable: true
+@Search: { defaultSearchElement: true , fuzzinessThreshold: 0.7 }
+
+
+
+@UI.Headerinfo.typeName: ''
+@semantic.amount.currencyCode
+@semantic.currencyCode
+@DefaultAggregation: #SUM
+
+@UI.headerInfo
+@UI.selectionField
+@UI.lineItem
+@UI.identification
+@UI.hidden: true
+
+@ObjectModel: { modelCategory: #BUSINESS_OBJECT,
+                compositionRoot: true,
+                transactionalProcessingEnabled: true,
+                writeActivePersistence: 'zpl_sales',
+                createEnabled: true,
+                deleteEnabled: true,
+                updateEnabled: true }
+
+
+
+
+Wipro - ABAP 7.5 SPS 10
+OSA - S/4 Hana 1909
+MB - ABAP 7.4 SPS 06
+
+
+
