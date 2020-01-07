@@ -1,1 +1,8 @@
 test
+
+1. se11 - lock objects it starts with EZ* there we have to add parameters it will create corresponding function modules
+          enque_ez* for locking with input prameter specified in lock object.
+          deque_ez* for unlocking with input prameter specified in lock object.
+          
+        - Transparent table - There is a physical table on the database for each transparent table.
+        - Pooled table - Pooled tables can be used to store control data (e.g. screen sequences, program parameters or temporary data).
