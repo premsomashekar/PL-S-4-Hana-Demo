@@ -36,8 +36,6 @@ CDS function like currency conversion
 @Search.searchable: true
 @Search: { defaultSearchElement: true , fuzzinessThreshold: 0.7 }
 
-
-
 @UI.Headerinfo.typeName: ''
 @semantic.amount.currencyCode
 @semantic.currencyCode
@@ -57,12 +55,58 @@ CDS function like currency conversion
                 deleteEnabled: true,
                 updateEnabled: true }
 
-
-
-
 Wipro - ABAP 7.5 SPS 10
 OSA - S/4 Hana 1909
 MB - ABAP 7.4 SPS 06
 
+
+@EndUserText.label : 'Sales: Header'
+@AbapCatalog.enhancementCategory : #EXTENSIBLE_ANY
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #ALLOWED
+
+@AbapCatalog.foreignKey.label : 'Customer'
+@AbapCatalog.foreignKey.keyType : #KEY
+@AbapCatalog.foreignKey.screenCheck : true
+
+RICEF - REPORTS INTERFACE CONVERSIONS ENHANCEMENTS FORMS
+Classical Reports. - Can exhecute without Tcode in se38
+Report events
+1. At selection screen  - Used for validation
+2. Start of selection  - logic
+3. Initalization
+4. At selection screen output
+5. END-OF-SELECTION
+6. TOP-OF-PAGE
+7. END-OF-PAGE
+
+set pf-status 'PF_STAT'.
+
+Module POOL - Module pool has to always exhecute with some TCODE. screen has to be designed
+1. Process after input
+2. Process before output
+3. Process on Value
+4. Process on Help
+
+Forms
+
+SSF_FUNCTION_MODULE_NAME
+SSF_OPEN
+SSF_CLOSE
+
+TEXT_CONVERT_XLS_TO_SAP
+
+REUSE_ALV_GRID_DISPLAY
+
+FTP_CONNECT
+FTP_SERVER_TO_R3
+
+  call transaction 'VL_COMPLETE' using bdcdata messages into messtab
+        options from ctu_params.
+
+OO - Concepts
+
+in Inheritance it first calls base class constructor then calls child class constructor
 
 
