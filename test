@@ -113,6 +113,8 @@ in Inheritance it first calls base class constructor then calls child class cons
 SWO1 - Buisness object repository.
 BAPI - Tcode
 
+BADI - SE18 BADI - SE19
+
 
 
 
