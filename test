@@ -102,7 +102,8 @@ REUSE_ALV_GRID_DISPLAY
 FTP_CONNECT
 FTP_SERVER_TO_R3
 
-  call transaction 'VL_COMPLETE' using bdcdata messages into messtab
+BDC Recording Tcode - SHDB
+call transaction 'VL_COMPLETE' using bdcdata messages into messtab
         options from ctu_params.
 
 OO - Concepts
@@ -115,7 +116,13 @@ BAPI - Tcode
 
 BADI - SE18 BADI - SE19
 
+sales order - Transaction VA01 - Tables VBAK, VBAP, VBEP, VBKD, VBPA, VBUK, VBUP.
 
+Delivery - Transaction VL01N - Tables LIKP, LIPS, VBUK, VBUP.
+
+Goods issue - Transaction VL02N - Tables MKPF, MSEG
+
+Billing document - Transaction VF01 - Tables VBRK, VBRP.
 
 
 
